@@ -3,6 +3,7 @@ let length = text.length; //26
 console.log(length);
 console.log("-----------------");
 
+
 text = "JavaScript";
 console.log(text.at(0));   // "J"  (first character)
 console.log(text.at(4));   // "S"
@@ -10,12 +11,14 @@ console.log(text.at(-1));  // "t"  (last character)
 console.log(text.at(-3));  // "i"  (third-last character)
 console.log("-----------------");
 
+
 text = "JavaScript";
 console.log(text.charAt(0));  // "J"
 console.log(text.charAt(4));  // "S"
 console.log(text.charAt(text.length - 1)); // "t" (last character)
 console.log(text.charAt(100)); // ""
 console.log("-----------------");
+
 
 text = "JavaScript";
 console.log(text.charCodeAt(0));  // 74  (Unicode for 'J')
@@ -27,12 +30,14 @@ console.log(String.fromCharCode(74));  // "J"
 console.log(String.fromCharCode(83));  // "S"
 console.log("-----------------");
 
+
 text = "JavaScript";
 console.log(text[0]);    // "J"
 console.log(text[4]);    // "S"
 console.log(text[text.length - 1]); // "t" (last character)
 console.log(text[100]);  // undefined (out-of-bounds)
 console.log("-----------------");
+
 
 console.log(text);
 console.log("text.slice(0, 4)");
@@ -44,6 +49,7 @@ console.log(text.slice(-6));     // "Script" (last 6 characters)
 console.log(text.slice(-6, -3)); // "Scr" (from -6 to -3)
 console.log("-----------------");
 
+
 console.log(text);
 console.log("text.substring(0, 4)");
 text = "JavaScript";
@@ -53,6 +59,7 @@ console.log(text.substring(4));      // "Script"
 console.log(text.substring(10, 4));  // "Script" (swaps values)
 console.log(text.substring(-6, -3)); // "" (negative indexes are ignored) 
 console.log("-----------------");
+
 
 console.log(text);
 console.log("text.substr(0, 4)");
@@ -64,17 +71,20 @@ console.log(text.substr(-6, 6)); // "Script" (start 6 from the end, take 6)
 console.log(text.substr(-6, 3)); // "Scr" (start 6 from the end, take 3) 
 console.log("-----------------");
 
+
 console.log("text.toUpperCase()");
 text = "hello world";
 console.log(text);
 console.log(text.toUpperCase()); // "HELLO WORLD"
 console.log("-----------------");
 
+
 console.log("text.toLowerCase()");
 text = "HELLO WORLD";
 console.log(text);
 console.log(text.toLowerCase()); // "hello world"
 console.log("-----------------");
+
 
 console.log(`str1.concat(" ", str2)`);
 console.log(`str1 + " " + str2`);
@@ -95,17 +105,20 @@ console.log(text);
 console.log(text.trim()); // "Hello World"
 console.log("-----------------");
 
+
 text = "   Hello World   ";
 console.log(text);
 console.log("text.trimStart())");
 console.log(text.trimStart()); // "Hello World   "
 console.log("-----------------");
 
+
 text = "   Hello World   ";
 console.log(text);
 console.log("text.trimEnd())");
 console.log(text.trimEnd()); // "   Hello World"
 console.log("-----------------");
+
 
 let num = "5";
 console.log(num);
@@ -122,22 +135,27 @@ console.log(num.padEnd(4, "0"));  // "5000"
 console.log("123".padEnd(6, "-")); // "123---"
 console.log("-----------------");
 
+
 text = "Hello ";
 console.log(text.repeat(3)); // "Hello Hello Hello "
 console.log("-----------------");
+
 
 text = "I love JavaScript. JavaScript is awesome!";
 console.log(text.replace("JavaScript", "Python")); // "I love Python. JavaScript is awesome!"
 console.log("-----------------");
 
+
 text = "I love JaVaScript. JavaScript is awesome!";
 console.log(text.replace(/javascript/i, "Python")); 
 console.log("-----------------");
+
 
 text = "I love JavaScript. JavaScript is awesome!";
 console.log(text.replaceAll("JavaScript", "Python")); 
 // "I love Python. Python is awesome!"
 console.log("-----------------");
+
 
 text = "apple,banana,cherry";
 console.log(text.split(","));  
@@ -147,6 +165,7 @@ console.log(text.split(""));
 console.log(text.split(" "));  
 // ["apple,banana,cherry"] (no spaces)
 console.log("-----------------");
+
 
 text = "Hello JavaScript, welcome to JavaScript!";
 console.log(text.indexOf("JavaScript"));  // 6 (first occurrence)
@@ -161,9 +180,9 @@ console.log(text.search(/JavaScript/i)); // 6 (case-insensitive match)
 console.log(text.search("Python"));      // -1 (not found)
 console.log("-----------------");
 
-console.log("text");
 
 text = "I love JavaScript. JavaScript is great.";
+console.log("text");
 console.log("text.match(/JavaScript/g)");
 console.log(text.match(/JavaScript/g));  // ["JavaScript", "JavaScript"]
 console.log("text.match(/JavaScript/i)");
@@ -172,12 +191,11 @@ console.log(text.match("Python"));       // null (not found)
 console.log("-----------------");
 
 
-
 text = "I love JavaScript. JavaScript is great.";
 let matches = text.matchAll(/JavaScript/g);
 console.log([...matches]);  
-
 console.log("-----------------");
+
 
 text = "Hello JavaScript!";
 console.log(text.includes("JavaScript"));  // true
