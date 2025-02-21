@@ -121,3 +121,83 @@ console.log(`num.padEnd(4, "0")`);
 console.log(num.padEnd(4, "0"));  // "5000"
 console.log("123".padEnd(6, "-")); // "123---"
 console.log("-----------------");
+
+text = "Hello ";
+console.log(text.repeat(3)); // "Hello Hello Hello "
+console.log("-----------------");
+
+text = "I love JavaScript. JavaScript is awesome!";
+console.log(text.replace("JavaScript", "Python")); // "I love Python. JavaScript is awesome!"
+console.log("-----------------");
+
+text = "I love JaVaScript. JavaScript is awesome!";
+console.log(text.replace(/javascript/i, "Python")); 
+console.log("-----------------");
+
+text = "I love JavaScript. JavaScript is awesome!";
+console.log(text.replaceAll("JavaScript", "Python")); 
+// "I love Python. Python is awesome!"
+console.log("-----------------");
+
+text = "apple,banana,cherry";
+console.log(text.split(","));  
+// ["apple", "banana", "cherry"]
+console.log(text.split(""));   
+// ["a", "p", "p", "l", "e", ",", "b", "a", "n", "a", "n", "a", ",", "c", "h", "e", "r", "r", "y"]
+console.log(text.split(" "));  
+// ["apple,banana,cherry"] (no spaces)
+console.log("-----------------");
+
+text = "Hello JavaScript, welcome to JavaScript!";
+console.log(text.indexOf("JavaScript"));  // 6 (first occurrence)
+console.log(text.indexOf("Python"));      // -1 (not found)
+console.log(text.indexOf("JavaScript", 10)); // 22 (search starts from index 10)
+console.log("-----------------");
+
+
+text = "Hello JavaScript, welcome to JavaScript!";
+console.log(text.search("JavaScript"));  // 6 (first occurrence)
+console.log(text.search(/JavaScript/i)); // 6 (case-insensitive match)
+console.log(text.search("Python"));      // -1 (not found)
+console.log("-----------------");
+
+console.log("text");
+
+text = "I love JavaScript. JavaScript is great.";
+console.log("text.match(/JavaScript/g)");
+console.log(text.match(/JavaScript/g));  // ["JavaScript", "JavaScript"]
+console.log("text.match(/JavaScript/i)");
+console.log(text.match(/JavaScript/i));  // ["JavaScript", index: 7, input: "I love JavaScript...", groups: undefined]
+console.log(text.match("Python"));       // null (not found)
+console.log("-----------------");
+
+
+
+text = "I love JavaScript. JavaScript is great.";
+let matches = text.matchAll(/JavaScript/g);
+console.log([...matches]);  
+
+console.log("-----------------");
+
+text = "Hello JavaScript!";
+console.log(text.includes("JavaScript"));  // true
+console.log(text.includes("Python"));      // false
+console.log(text.includes("Hello", 5));    // false (search starts from index 5)
+console.log("-----------------");
+
+
+text = "Hello JavaScript!";
+console.log(text.startsWith("Hello"));  // true
+console.log(text.startsWith("Java"));   // false
+console.log(text.startsWith("Java", 6)); // true (check from index 6)
+console.log("-----------------");
+
+
+text = "Hello JavaScript!";
+console.log(text.endsWith("JavaScript!")); // true
+console.log(text.endsWith("Hello"));       // false
+console.log(text.endsWith("JavaScript", 17)); 
+// true (considering only first 17 chars) 
+console.log("-----------------");
+
+
