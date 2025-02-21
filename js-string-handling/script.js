@@ -52,10 +52,72 @@ console.log(text.substring(4, 10));  // "Script"
 console.log(text.substring(4));      // "Script"
 console.log(text.substring(10, 4));  // "Script" (swaps values)
 console.log(text.substring(-6, -3)); // "" (negative indexes are ignored) 
+console.log("-----------------");
+
+console.log(text);
+console.log("text.substr(0, 4)");
+text = "JavaScript";
+console.log(text.substr(0, 4));  // "Java" (start at 0, take 4 characters)
+console.log(text.substr(4, 6));  // "Script" (start at 4, take 6 characters)
+console.log(text.substr(4));     // "Script" (start at 4, take all remaining)
+console.log(text.substr(-6, 6)); // "Script" (start 6 from the end, take 6)
+console.log(text.substr(-6, 3)); // "Scr" (start 6 from the end, take 3) 
+console.log("-----------------");
+
+console.log("text.toUpperCase()");
+text = "hello world";
+console.log(text);
+console.log(text.toUpperCase()); // "HELLO WORLD"
+console.log("-----------------");
+
+console.log("text.toLowerCase()");
+text = "HELLO WORLD";
+console.log(text);
+console.log(text.toLowerCase()); // "hello world"
+console.log("-----------------");
+
+console.log(`str1.concat(" ", str2)`);
+console.log(`str1 + " " + str2`);
+console.log("${str1} ${str2}");
+let str1 = "Hello";
+let str2 = "World";
+console.log(str1);
+console.log(str2);
+console.log(str1.concat(" ", str2)); // "Hello World"
+console.log(str1 + " " + str2);      // "Hello World" (alternative)
+console.log(`${str1} ${str2}`);      // "Hello World" (template literals) 
+console.log("-----------------");
 
 
+text = "   Hello World   ";
+console.log("text.trim()");
+console.log(text);
+console.log(text.trim()); // "Hello World"
+console.log("-----------------");
+
+text = "   Hello World   ";
+console.log(text);
+console.log("text.trimStart())");
+console.log(text.trimStart()); // "Hello World   "
+console.log("-----------------");
+
+text = "   Hello World   ";
+console.log(text);
+console.log("text.trimEnd())");
+console.log(text.trimEnd()); // "   Hello World"
+console.log("-----------------");
+
+let num = "5";
+console.log(num);
+console.log(`num.padStart(4, "0")`);
+console.log(num.padStart(4, "0"));  // "0005"
+console.log("123".padStart(6, "-")); // "---123"
+console.log("-----------------");
 
 
-
-
-
+num = "5";
+console.log(num);
+console.log(`num.padEnd(4, "0")`);
+console.log(num.padEnd(4, "0"));  // "5000"
+console.log("123".padEnd(6, "-")); // "123---"
+console.log("-----------------");
