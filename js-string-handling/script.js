@@ -221,3 +221,6 @@ console.log("-----------------");
 
 
 
+let text2 = "I love JavaScript. JavaScript is great.";
+let matches2 = text2.matchAll(/JavaScript/g);
+console.log(...matches2);  
