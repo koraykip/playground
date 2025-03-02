@@ -11,5 +11,6 @@ function calculate() {
 const calculateBtn = document.querySelector("#calculate");
 const clearBtn = document.querySelector("#clear");
 
+
 calculateBtn.addEventListener("click", calculate);
 clearBtn.addEventListener("click", () => (results.textContent = ""));
