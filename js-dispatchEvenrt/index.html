@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <button class="btn">Test</button>
+
+    <script>
+        let btn = document.querySelector('.btn');
+
+        btn.addEventListener('click', function () {
+            alert('Mouse Clicked');
+        });
+
+        let clickEvent = new Event('click');
+        btn.dispatchEvent(clickEvent);
+
+    </script>
+</body>
+</html>
